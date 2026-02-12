@@ -1,0 +1,113 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "minimum_contrast_for_highlights": 45.0,
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "cursor_shape": "bar",
+    "font_family": "JetBrainsMono Nerd Font"
+  },
+  "colorize_brackets": true,
+  "cursor_shape": "bar",
+  "indent_guides": {
+    "active_line_width": 2,
+    "background_coloring": "disabled",
+    "coloring": "indent_aware"
+  },
+  "window_decorations": "client",
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
+    "model_parameters": []
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  "buffer_font_family": "Segoe UI",
+  "format_on_save": "on",
+  "ui_font_family": ".SystemUIFont",
+  "features": {
+    "edit_prediction_provider": "supermaven"
+  },
+  "icon_theme": "Monospace Icon Theme - Dark",
+  "base_keymap": "VSCode",
+  "vim_mode": false,
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15,
+  "theme": "Aqua Flow ",
+  //lsp config
+
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": "/usr/bin/python"
+        }
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "pyright"],
+      "format_on_save": "on",
+      "formatter": [
+        { "code_action": "source.organizeImports.ruff" },
+        { "code_action": "source.fixAll.ruff" },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "C": {
+      "format_on_save": "on",
+      "tab_size": 2
+    }
+  },
+  "editor": {
+    "formatOnSave": true,
+    "language.python.formatter": "black"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 10,
+  "modules-left": ["hyprland/workspaces"],
+
+  "modules-center": ["clock"],
+
+  "modules-right": ["pulseaudio", "battery", "network"],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "format-icons": {
+      "urgent": "",
+      "active": "", // focused workspace on current monitor
+      "visible": "", // focused workspace on other monitors
+      "default": "",
+    },
+    "active-only": true,
+    "all-outputs": false, // recommended
+  },
+
+  "clock": {
+    "format": "{:%H:%M  |  %a %d %b}",
+  },
+  "date": {
+    "timezone": "Asia/Kolkata",
+    "exec": "date +'%d %b %Y'",
+    "format": "󰃭 {}",
+    "interval": 1,
+    "tooltip": true,
+  },
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "  {volume}%",
+  },
+
+  "battery": {
+    "format": "  {capacity}%",
+    "format-charging": "  {capacity}%",
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀  {ipaddr}",
+    "format-disconnected": "",
+  },
+}

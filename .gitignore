@@ -1,28 +1,13 @@
-# OS junk
 .DS_Store
 Thumbs.db
-
-# Logs
 *.log
-
-# Cache (VERY IMPORTANT)
 .cache/
 */.cache/*
-
-# Temp files
 *.tmp
 *.swp
 *~
-
-# Secrets / env
 .env
 *.env
-
-# SSH (never upload this)
 .ssh/
-
-# GnuPG
 .gnupg/
-
-# Node garbage if it appears somewhere
 node_modules/
