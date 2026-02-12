@@ -8,7 +8,7 @@ The goal of this setup is simplicity, performance, and consistency across machin
 
 ## ⚙️ Core Stack
 
-- **Window Manager:** Hyprland
+- **Window Manager:** Hyprland(Wayland)
 - **Terminal:** WezTerm
 - **Editor:** Zed
 - **Shell:** bash
