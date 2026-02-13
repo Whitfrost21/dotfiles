@@ -32,10 +32,10 @@ This setup allows me to rebuild my entire working environment in minutes.
 
 ## Preview
 
-!["image1"](https://github.com/Whitfrost21/dotfiles/assets/myrice.png)
-!["image2"](https://github.com/Whitfrost21/dotfiles/assets/myset.png)
-!["image3"](https://github.com/Whitfrost21/dotfiles/assets/icecloud.png)
-!["image4"](https://github.com/Whitfrost21/dotfiles/assets/withbtop.png)
+!["image1"](https://github.com/Whitfrost21/dotfiles/blob/master/assets/myrice.png)
+!["image2"](https://github.com/Whitfrost21/dotfiles/blob/master/assets/myset.png)
+!["image3"](https://github.com/Whitfrost21/dotfiles/blob/master/assets/icecloud.png)
+!["image4"](https://github.com/Whitfrost21/dotfiles/blob/master/assets/withbtop.png)
 
 ---
 
