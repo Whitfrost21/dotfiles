@@ -8,6 +8,7 @@ The goal of this setup is simplicity, performance, and consistency across machin
 
 ## ⚙️ Core Stack
 
+- **OS**: Endeavour OS (Arch Linux based)
 - **Window Manager:** Hyprland(Wayland)
 - **Terminal:** WezTerm
 - **Editor:** Zed
