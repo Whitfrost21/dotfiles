@@ -30,6 +30,15 @@ This setup allows me to rebuild my entire working environment in minutes.
 
 ---
 
+## Preview
+
+!["image1"](https://github.com/Whitfrost21/dotfiles/assets/myrice.png)
+!["image2"](https://github.com/Whitfrost21/dotfiles/assets/myset.png)
+!["image3"](https://github.com/Whitfrost21/dotfiles/assets/icecloud.png)
+!["image4"](https://github.com/Whitfrost21/dotfiles/assets/withbtop.png)
+
+---
+
 ## 📂 Structure
 
 .config/ contains all application configurations managed via GNU Stow.
