@@ -18,6 +18,22 @@ The goal of this setup is simplicity, performance, and consistency across machin
 
 ---
 
+## Apps
+
+| App / Tool          | Category                |
+| :------------------ | :---------------------- |
+| **fastfetch**       | System Information      |
+| **cava**            | Audio Visualizer        |
+| **kitty / wezterm** | Terminal Emulators      |
+| **neovim / zed**    | Text Editors            |
+| **swaync**          | Notification Center     |
+| **wallust**         | Color Palette Generator |
+| **waybar**          | Status Bar              |
+| **wofi**            | App Launcher            |
+| **wlogout**         | Logout Menu             |
+
+---
+
 ## ✨ Philosophy
 
 - Keep the system minimal
