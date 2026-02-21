@@ -3,22 +3,16 @@
 window {
     background: rgba(46, 52, 64, 0.85); /* Nord0*/
     /* border-radius: 8px; */
-    border:2px solid #88C0D0;
+    border: 2px solid #88c0d0;
     padding: 12px;
     margin: 10px;
-
-    /* Blur effect (Wayland comp compatible) */
 }
 
 #input {
-    /* margin: 8px 0 12px 0; */
     padding: 10px;
-    /* border-radius: 10px; */
-
     background-color: rgba(59, 66, 82, 0.8); /* Nord1 */
     color: #eceff4; /* Nord6 */
-    border: 2px solid #88C0D0;
-
+    border: 2px solid #88c0d0;
     font-size: 14px;
 }
 
@@ -29,7 +23,7 @@ window {
 #entry {
     padding: 8px 12px;
     /* border-radius: 10px; */
-  
+
     color: #d8dee9; /* Nord4 */
     font-size: 14px;
     background: transparent;
@@ -37,16 +31,13 @@ window {
 
 #entry:selected {
     background-color: palevioletred; /* Nord10 */
-    
-  }
+}
 #entry:selected #text {
     color: #000000;
 }
 #text {
     padding-left: 8px;
 }
-
-/* Scrollbar */
 #scroll {
     margin-top: 5px;
 }
