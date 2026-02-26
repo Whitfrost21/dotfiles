@@ -70,12 +70,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/Whitfrost21/dotfiles.git ~/dots
 cd ~/dots
-```
-
-Stow the configuration:
-
-```bash
-stow .
+./install.sh
 ```
 
 Restart your session or reload the relevant applications.
