@@ -1,0 +1,55 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 10,
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory","custom/bluetooth", "network", "pulseaudio", "battery"],
+  "modules-left": ["hyprland/workspaces", "custom/ws"],
+
+
+  "clock": {
+    "timezone": "Asia/Kolkata",
+  "format": " {:%I:%M %p}",
+  "format-alt": "󰃭 {:%d %b %Y}",
+  "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%"
+  },
+
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": "  {capacity}%",
+     "critical-percentage": 15,
+  "max-icon-percentage": 100,
+  "min-icon-percentage": 0
+  },
+
+  "cpu": {
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "format": " {used}G"
+  },
+  "custom/ws": {
+  "exec": "hyprctl monitors -j | jq '.[0].activeWorkspace.id'",
+  "interval": 1,
+  "format": " {}",
+  "tooltip": true
+},
+
+  "network": {
+    "format-wifi": " {essid}",
+    "format-ethernet": ""
+  },
+
+ "custom/bluetooth": {
+  "exec": "~/.config/waybar/scripts/bluetooth.sh",
+  "interval": 5,
+  "on-click": "blueman-manager",
+  "on-right-click":"blueman-applet",
+  "tooltip": true
+}
+}

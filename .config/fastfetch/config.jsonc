@@ -1,0 +1,108 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+   "type":"small",
+    "padding": {
+      "top": 2,
+      "left": 3
+    }
+  },
+  "display": {
+    "separator": " ~> ",
+    "color": {
+      "separator": "cyan"
+    }
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "    ╭──────────────────────────────────────╮"
+    },
+    {
+      "type": "title",
+      "format": "    │  {user-name}@{host-name}    │",
+      "color": {
+        "user": "magenta",
+        "host": "cyan"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "    ╰──────────────────────────────────────╯"
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "  OS",
+      "keyColor": "blue",
+      "color": "blue"
+    },
+    {
+      "type": "kernel",
+      "key": "  Kernel",
+      "keyColor": "cyan",
+      "color": "cyan"
+    },
+    {
+      "type": "uptime",
+      "key": "  Uptime",
+      "keyColor": "green",
+      "color": "green"
+    },
+    {
+      "type": "packages",
+      "key": "  Pkgs",
+      "keyColor": "yellow",
+      "color": "yellow"
+    },
+    "break",
+    {
+      "type": "shell",
+      "key": "  Shell",
+      "keyColor": "magenta",
+      "color": "magenta"
+    },
+    {
+      "type": "terminal",
+      "key": "  Term",
+      "keyColor": "red",
+      "color": "red"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "  CPU",
+      "keyColor": "blue",
+      "color": "blue"
+    },
+    {
+      "type": "gpu",
+      "key": "  GPU",
+      "keyColor": "green",
+      "color": "green"
+    },
+    {
+      "type": "memory",
+      "key": "  RAM",
+      "keyColor": "yellow",
+      "color": "yellow"
+    },
+    {
+      "type": "disk",
+      "key": "  Disk",
+      "keyColor": "cyan",
+      "color": "cyan"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "    ──────────────────────────────"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 4
+    }
+  ]
+}

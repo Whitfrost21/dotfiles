@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+.cache/
+*/.cache/*
+*.tmp
+*.swp
+*~
+.env
+*.env
+.ssh/
+.gnupg/
+node_modules/
+.config/zed

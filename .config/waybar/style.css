@@ -1,0 +1,109 @@
+/* =====================================================
+ *   PERFECT COMPACT WAYBAR (GTK3 VALID)
+ *   Font: 10px
+ *   Height: ~15–16px
+ *
+ *   ===================================================== */
+
+
+
+/* ---------- Colors ---------- */
+@define-color nord0 #2E3440;
+@define-color nord1 #3B4252;
+@define-color nord2 #434C5E;
+@define-color nord4 #D8DEE9;
+@define-color nord7 #88C0D0;
+
+/* ---------- Global Reset ---------- */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 1px;
+    margin: 0;
+
+    min-height: 0;
+    border: none;
+}
+
+/* ---------- Waybar Window ---------- */
+window#waybar {
+    min-height: 16px;
+    background: rgba(46, 52, 64, 0);
+    padding: 0;
+}
+
+/* ---------- Base Modules ---------- */
+#workspaces,
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#date,
+#custom-bluetooth,
+#memory,
+#cpu {
+    padding: 0 4px;
+    margin: 0 2px;
+    min-height: 0;
+    color: @nord4;
+}
+
+/* ---------- Workspaces ---------- */
+#workspaces button {
+    padding: 0 5px;
+    margin: 0 1px;
+
+    min-height: 0;
+
+    background: @nord1;
+    color: @nord4;
+
+    border-radius: 8px;
+    border: 1px solid @nord2;
+}
+
+#workspaces button.active {
+    background: @nord7;
+    color: @nord0;
+    border-color: @nord7;
+}
+
+/* ---------- Clock ---------- */
+#clock,
+#date {
+    padding: 0 4px;
+    border-radius: 10px;
+    background: black;
+}
+
+/* ---------- Right Modules ---------- */
+#pulseaudio,
+#network,
+#battery,
+#cpu,
+#memory,
+#custom-bluetooth {
+    color: black;
+    background: @nord7;
+    padding: 0 4px;
+    border-radius: 8px;
+}
+
+#battery.critical {
+    color: #bf616a;
+    font-weight: bold;
+}
+/* ---------- Labels ---------- */
+label {
+    padding: 0 2px;
+    margin: 0;
+    min-height: 0;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 0;
+    min-height: 0;
+}

@@ -1,0 +1,19 @@
+# ---------- WOFI NORD CONFIG ---------- #
+
+# Show app launcher mode
+show = drun
+
+# No icons (clean)
+allow_images = true
+
+# Nord-themed, simple layout
+prompt = Search…
+
+# Hide scrollbars until needed
+hide_scroll = true
+
+# Fuzzy match for better search
+allow_markup = true
+term = wezterm
+width = 450
+
