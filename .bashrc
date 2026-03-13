@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# ── Nordic Minimal Prompt ──
+# ── Minimal Prompt ──
 PS1='\[\e[38;5;81m\]\u\[\e[0m\] \[\e[38;5;252m\]\w\[\e[0m\] \[\e[38;5;109m\]⟩\[\e[0m\] '
 
 
