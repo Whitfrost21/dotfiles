@@ -32,3 +32,5 @@ source ~/.bun-completions.bash
 if [ -f "$HOME/.cache/wallust/sequences" ]; then
   cat "$HOME/.cache/wallust/sequences"
 fi
+
+export EDITOR="nvim"
