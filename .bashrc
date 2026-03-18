@@ -20,7 +20,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export SAL_USE_VCLPLUGIN=gtk3
 # pnpm
-export PNPM_HOME="/home/pz/.local/share/pnpm"
+export PNPM_HOME="~/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
