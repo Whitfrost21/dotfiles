@@ -2,25 +2,32 @@
 local M = {}
 
 M.base46 = {
-  theme = "tokyodark",
+    theme = "tokyodark",
 }
 
--- Adding nvdash to load on startup
+-- Proper indentation settings
+vim.o.expandtab = true
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.smartindent = true
+
+-- Open dashboard on startup
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if vim.fn.argc() == 0 then  -- Checks if no files were passed to Neovim
-      vim.cmd "Nvdash"
-    end
-  end,
+    callback = function()
+        if vim.fn.argc() == 0 then
+            vim.cmd "Nvdash"
+        end
+    end,
 })
 
--- Auto format on save for different file types (Only if LSP is available)
-vim.cmd([[
-  autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.html,*.json,*.css,*.scss,*.md lua vim.lsp.buf.format()
-  autocmd BufWritePre *.go lua vim.lsp.buf.format()  -- Go-specific
-  autocmd BufWritePre *.py lua vim.lsp.buf.format()
-]])
-
-
+-- Auto format on save (only if LSP attached)
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.html", "*.json", "*.css", "*.scss", "*.md", "*.go", "*.py" },
+    callback = function()
+        if vim.lsp.buf.format then
+            vim.lsp.buf.format()
+        end
+    end,
+})
 
 return M
