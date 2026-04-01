@@ -17,10 +17,10 @@ config.window_decorations = "NONE"
 config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
-  left = 14,
-  right = 14,
-  top = 10,
-  bottom = 10,
+  left = 10,
+  right = 0,
+  top = 5,
+  bottom = 0,
 }
 
 -- FONT
@@ -46,7 +46,7 @@ config.scrollback_lines = 5000
 -- config.mouse_wheel_scrolls_lines = 1
 
 -- text clarity 
-config.line_height = 1.12
+config.line_height = 1.0
 config.freetype_load_flags = "NO_HINTING"
 config.bold_brightens_ansi_colors = true
 
