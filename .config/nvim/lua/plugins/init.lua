@@ -4,6 +4,14 @@ return {
         -- event = 'BufWritePre', -- un comment for format on save
         opts = require "configs.conform",
     },
+  {
+    "NTBBloodbath/galaxyline.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = false,
+    config = function()
+      require("custom.statusline")
+    end,
+  },
 
     {
         "jose-elias-alvarez/null-ls.nvim",

@@ -36,12 +36,6 @@ require("lazy").setup({
 -- Set up mason to install LSP servers automatically
 require("mason").setup()
 
--- LSP setup for Go, Python, and PHP
-local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({})
-lspconfig.pyright.setup({})
-lspconfig.intelephense.setup({})
-
 -- LuaSnip setup
 local luasnip = require("luasnip")
 vim.api.nvim_set_keymap("i", "<Tab>", "luasnip.expand_or_jump()", { noremap = true, silent = true })

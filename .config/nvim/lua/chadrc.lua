@@ -2,9 +2,13 @@
 local M = {}
 
 M.base46 = {
-    theme = "tokyodark",
+    theme = "aquarium",
 }
-
+M.ui = {
+  statusline = {
+    theme = "none",  -- disables NvChad's default statusline
+  },
+}
 -- Proper indentation settings
 vim.o.expandtab = true
 vim.o.shiftwidth = 2

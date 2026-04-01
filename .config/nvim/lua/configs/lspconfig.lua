@@ -1,27 +1,36 @@
--- Load defaults from NvChad's LSP setup
+-- Load NvChad LSP defaults
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
-local nvlsp = require "nvchad.configs.lspconfig"
+local nvlsp = require("nvchad.configs.lspconfig")
 
--- List of servers you want to configure (you can add more here)
-local servers = { "html", "cssls", "gopls" }
+-- New Neovim 0.11 style per-server config
+local servers = {
+  html        = {},
+  cssls       = {},
+  gopls       = {
+    settings = {
+      gopls = {
+        analyses  = { unusedparams = true },
+        staticcheck = true,
+      },
+    },
+  },
+  pyright     = {},
+  intelephense = {},
+}
 
--- Configure LSP servers with defaults
-for _, lsp in ipairs(servers) do
-  -- Setup each server (including gopls)
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-    -- Additional configurations specific to gopls
-    settings = lsp == "gopls" and {
-      -- Add any specific settings for gopls here if necessary
-    } or nil
-  }
+for server, opts in pairs(servers) do
+  opts.on_attach    = nvlsp.on_attach
+  opts.on_init      = nvlsp.on_init
+  opts.capabilities = nvlsp.capabilities
+  vim.lsp.config(server, opts)
+  vim.lsp.enable(server)
 end
 
 -- Auto format Go files on save
-vim.cmd([[
-  autocmd BufWritePre *.go lua vim.lsp.buf.format()
-]])
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+})
