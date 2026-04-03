@@ -28,6 +28,7 @@ return {
 
 
                 },
+
             })
         end
     },
@@ -85,6 +86,26 @@ return {
             float_opts = { border = "rounded" },
         },
     },
+  {
+  "folke/flash.nvim",
+  event = "VeryLazy",
+opts = {
+  labels = "asdfghjklqwertyuiop",
+  label = {
+    uppercase = false,
+    rainbow = { enabled = true, shade = 5 },
+  },
+  modes = {
+    search = { enabled = false }
+  },
+  keys = {
+    ["<esc>"] = "close",    -- only esc closes
+    ["<bs>"] = "del",       -- backspace deletes a char
+    ["<cr>"] = "jump",      -- enter to jump
+    -- remove s and n from special keys so they type normally
+  },
+},
+},
 
     { "L3MON4D3/LuaSnip", build = nil, pin = true },
 }

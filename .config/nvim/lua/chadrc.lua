@@ -6,7 +6,7 @@ M.base46 = {
 }
 M.ui = {
   statusline = {
-    theme = "none",  -- disables NvChad's default statusline
+    theme = "default",  -- disables NvChad's default statusline
   },
 }
 -- Proper indentation settings

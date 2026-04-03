@@ -86,3 +86,6 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- Temporary shim while waiting for plugins to update
+   vim.lsp.buf_get_clients = vim.lsp.get_clients
