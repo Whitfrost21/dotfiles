@@ -36,7 +36,8 @@ map({ "n", "x", "o" }, "s", function() require("flash").jump() end, { desc = "Fl
 map("c", "<C-s>", function() require("flash").toggle() end, { desc = "Flash toggle in search" })
 -- Flash treesitter (select whole nodes)
 map({ "n", "x", "o" }, "S", function() require("flash").treesitter() end, { desc = "Flash treesitter" })
-
+map("n","dw","_dw",{desc="delete entire word without cut"})
+map("n", "x", '"_x', { desc = "Delete char without cut" })
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "oil",
   callback = function()
