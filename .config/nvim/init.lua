@@ -35,7 +35,12 @@ require("lazy").setup({
 
 -- Set up mason to install LSP servers automatically
 require("mason").setup()
-
+require("mason-lspconfig").setup {
+  automatic_installation = true,  -- auto installs LSP when you open new filetype
+}
+require("nvim-treesitter.configs").setup {
+  auto_install = true,  -- installs grammar when you open new filetype
+}
 -- LuaSnip setup
 local luasnip = require("luasnip")
 vim.api.nvim_set_keymap("i", "<Tab>", "luasnip.expand_or_jump()", { noremap = true, silent = true })
@@ -82,7 +87,8 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
-
+vim.opt.relativenumber = true
+vim.opt.number = true  -- keeps current line showing absolute number
 vim.schedule(function()
   require "mappings"
 end)
