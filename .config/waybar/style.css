@@ -60,7 +60,6 @@ window#waybar {
     background: @nord1;
     color: @nord4;
 
-    border-radius: 8px;
     border: 1px solid @nord2;
 }
 
@@ -74,7 +73,6 @@ window#waybar {
 #clock,
 #date {
     padding: 0 4px;
-    border-radius: 10px;
     background: black;
 }
 
@@ -88,7 +86,6 @@ window#waybar {
     color: black;
     background: @nord7;
     padding: 0 4px;
-    border-radius: 8px;
 }
 
 #battery.critical {
