@@ -44,3 +44,4 @@ vim.api.nvim_create_autocmd("FileType", {
     map("n", "q", "<cmd>bd<cr>", { buffer = true, desc = "Close oil" })
   end,
 })
+
