@@ -31,6 +31,7 @@ The goal of this setup is simplicity, performance, and consistency across machin
 | **waybar**          | Status Bar              |
 | **wofi**            | App Launcher            |
 | **wlogout**         | Logout Menu             |
+| **yazi**            | File Manager            |
 
 ---
 
