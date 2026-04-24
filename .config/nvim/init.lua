@@ -95,3 +95,13 @@ end)
 
 -- Temporary shim while waiting for plugins to update
    vim.lsp.buf_get_clients = vim.lsp.get_clients
+
+   -- Fix for Neovim 0.10+ breaking Galaxyline/LSP calls
+   if vim.fn.has("nvim-0.10") == 1 then
+     local old_get_clients = vim.lsp.get_clients
+     ---@diagnostic disable-next-line: duplicate-set-field
+     vim.lsp.buf_get_clients = function(bufnr)
+     return old_get_clients({ bufnr = bufnr or 0 })
+     end
+     end
+
