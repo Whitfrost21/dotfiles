@@ -45,3 +45,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Jump to the NEXT placeholder in Insert and Select modes
+map({ "i", "s" }, "<C-k>", function()
+  if require("luasnip").expand_or_jumpable() then
+    require("luasnip").expand_or_jump()
+  end
+end, { desc = "Luasnip jump next" })
+
+-- Jump to the PREVIOUS placeholder in Insert and Select modes
+map({ "i", "s" }, "<C-j>", function()
+  if require("luasnip").jumpable(-1) then
+    require("luasnip").jump(-1)
+  end
+end, { desc = "Luasnip jump prev" })
+

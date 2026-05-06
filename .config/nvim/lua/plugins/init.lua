@@ -107,5 +107,9 @@ opts = {
 },
 },
 
-    { "L3MON4D3/LuaSnip", build = nil, pin = true },
+    { "L3MON4D3/LuaSnip", build = nil, pin = true, opts = {
+    -- Automatically remove snippet placeholders when the cursor moves out of them
+    region_check_events = "CursorMoved,CursorHold,InsertEnter",
+    delete_check_events = "TextChanged,InsertLeave",
+  }, },
 }

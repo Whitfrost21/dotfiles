@@ -58,13 +58,13 @@ config.keys = {
 { key = "Tab", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
   -- Splits (panes)
   -- Ctrl+H → horizontal split (top/bottom)
-  { key = "h", mods = "CTRL", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+  { key = "h", mods = "SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 
   -- Ctrl+V → vertical split (left/right)
-  { key = "v", mods = "CTRL", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+  { key = "v", mods = "SUPER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 
   -- Close pane
-  { key = "w", mods = "CTRL", action = act.CloseCurrentPane({ confirm = false }) },
+  { key = "w", mods = "SUPER", action = act.CloseCurrentPane({ confirm = false }) },
 }
 return config
 
