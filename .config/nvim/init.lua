@@ -38,9 +38,7 @@ require("mason").setup()
 require("mason-lspconfig").setup {
   automatic_installation = true,  -- auto installs LSP when you open new filetype
 }
-require("nvim-treesitter.configs").setup {
-  auto_install = true,  -- installs grammar when you open new filetype
-}
+
 -- LuaSnip setup
 local luasnip = require("luasnip")
 vim.api.nvim_set_keymap("i", "<Tab>", "luasnip.expand_or_jump()", { noremap = true, silent = true })
@@ -69,17 +67,7 @@ cmp.setup({
   },
 })
 
--- Treesitter setup for Go, Python, and PHP
-require("nvim-treesitter.configs").setup({
-  ensure_installed = { "go", "python", "php" },
-  highlight = {
-    enable = true,  -- Enable Treesitter highlighting
-    additional_vim_regex_highlighting = false,
-  },
-  indent = {
-    enable = true,  -- Enable Treesitter-based indentation
-  },
-})
+
 
 -- Load theme and other NvChad settings
 dofile(vim.g.base46_cache .. "defaults")

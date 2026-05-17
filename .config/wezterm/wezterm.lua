@@ -62,7 +62,10 @@ config.keys = {
 
   -- Ctrl+V → vertical split (left/right)
   { key = "v", mods = "SUPER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-
+-- Switch panes with Alt+Arrow (no Shift needed)
+    { key = 'LeftArrow',  mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
+    { key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+ 
   -- Close pane
   { key = "w", mods = "SUPER", action = act.CloseCurrentPane({ confirm = false }) },
 }
