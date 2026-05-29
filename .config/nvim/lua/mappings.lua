@@ -30,7 +30,7 @@ map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>",   { desc = "Live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>",     { desc = "Find buffers" })
 map("n", "<leader>fs", "<cmd>Telescope grep_string<cr>", { desc = "Grep word under cursor" })
 map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>",    { desc = "Recent files" })
-
+map("n", "<leader>fp", "<cmd>Telescope projects<CR>")
 -- Flash jump
 map({ "n", "x", "o" }, "s", function() require("flash").jump() end, { desc = "Flash jump" })
 map("c", "<C-s>", function() require("flash").toggle() end, { desc = "Flash toggle in search" })

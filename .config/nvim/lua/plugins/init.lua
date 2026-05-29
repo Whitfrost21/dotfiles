@@ -13,6 +13,25 @@ return {
             require("custom.statusline")
         end,
     },
+  {
+  "ahmedkhalf/project.nvim",
+  lazy = false,
+
+  config = function()
+    require("project_nvim").setup({
+      detection_methods = { "pattern" },
+
+      patterns = {
+        ".git",
+        "go.mod",
+        "Cargo.toml",
+        "Makefile",
+      },
+    })
+
+    require("telescope").load_extension("projects")
+  end,
+},
 
     {
         "jose-elias-alvarez/null-ls.nvim",

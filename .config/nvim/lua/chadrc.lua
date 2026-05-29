@@ -3,12 +3,52 @@ local M = {}
 
 M.base46 = {
     theme = "midnight_breeze",
+hl_override = {
+  NvDashAscii = {
+    fg = "#00ff87", -- term green
+    bold = true,
+  },
+ NvDashFooter = {
+      fg = "#ffffff",
+      -- italic = true,
+    },
+},
 }
 M.ui = {
   statusline = {
+    enable=false,
     theme = "default",  -- disables NvChad's default statusline
   },
 }
+M.nvdash = {
+ load_on_startup = false,
+ header = {
+  "",
+  "",
+  "  ██████╗ ███████╗██╗███████╗    ██╗      █████╗ ██████╗ ",
+  "  ██╔══██╗╚══███╔╝██║██╔════╝    ██║     ██╔══██╗██╔══██╗",
+  "  ██████╔╝  ███╔╝ ╚═╝███████╗    ██║     ███████║██████╔╝",
+  "  ██╔═══╝  ███╔╝     ╚════██║    ██║     ██╔══██║██╔══██╗",
+  "  ██║     ███████╗   ███████║    ███████╗██║  ██║██████╔╝",
+  "  ╚═╝     ╚══════╝   ╚══════╝    ╚══════╝╚═╝  ╚═╝╚═════╝ ",
+  "",
+  "     CODE • BUILD • DEBUG • SHIP",
+  "",
+  "   >_ SYSTEMS WORKSPACE",
+  "",
+},
+}
+
+
+
+M.term={
+  sizes={
+    vsp=0.45,
+    sp=0.3,
+  },
+}
+
+
 -- Proper indentation settings
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
