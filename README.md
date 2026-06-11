@@ -10,7 +10,7 @@ The goal of this setup is simplicity, performance, and consistency across machin
 
 - **OS**: Endeavour OS (Arch Linux based)
 - **Window Manager:** Hyprland(Wayland)
-- **Terminal:** WezTerm
+- **Terminal:** Ghostty
 - **Editor:** Zed
 - **Shell:** bash
 - **Status Bar:** Waybar
@@ -24,7 +24,7 @@ The goal of this setup is simplicity, performance, and consistency across machin
 | :------------------ | :---------------------- |
 | **fastfetch**       | System Information      |
 | **cava**            | Audio Visualizer        |
-| **kitty / wezterm** | Terminal Emulators      |
+| **kitty / ghostty** | Terminal Emulators      |
 | **neovim / zed**    | Text Editors            |
 | **swaync**          | Notification Center     |
 | **wallust**         | Color Palette Generator |
