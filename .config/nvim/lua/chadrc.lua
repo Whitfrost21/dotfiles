@@ -2,10 +2,10 @@
 local M = {}
 
 M.base46 = {
-    theme = "midnight_breeze",
+    theme = "everforest",
 hl_override = {
   NvDashAscii = {
-    fg = "#00ff87", -- term green
+    fg = "#00ffff", -- term green
     bold = true,
   },
  NvDashFooter = {

@@ -12,7 +12,7 @@ return {
         config = function()
             require("custom.statusline")
         end,
-    },
+    }, 
   {
   "ahmedkhalf/project.nvim",
   lazy = false,
@@ -22,10 +22,7 @@ return {
       detection_methods = { "pattern" },
 
       patterns = {
-        ".git",
-        "go.mod",
-        "Cargo.toml",
-        "Makefile",
+        ".git"
       },
     })
 
@@ -34,7 +31,9 @@ return {
 },
 
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        
+    "nvimtools/none-ls.nvim",
+
         config = function()
             local null_ls = require("null-ls")
 
@@ -56,10 +55,9 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             require "configs.lspconfig"
-        end,
+          end,
     },
 
-    -- {
     -- 	"nvim-treesitter/nvim-treesitter",
     -- 	opts = {
     -- 		ensure_installed = {
@@ -68,6 +66,21 @@ return {
     -- 		},
     -- 	},
     -- },
+{
+  "nvim-tree/nvim-tree.lua",
+  opts = function(_, opts)
+    local api = require("nvim-tree.api")
+
+    opts.on_attach = function(bufnr)
+      api.config.mappings.default_on_attach(bufnr)
+
+      vim.keymap.set("n", "d", api.fs.trash, {
+        buffer = bufnr,
+        desc = "Trash File",
+      })
+    end
+  end,
+},
     {
         "stevearc/oil.nvim",
         lazy = false,
@@ -104,31 +117,48 @@ return {
             direction = "float",
             float_opts = { border = "rounded" },
         },
-    },
-  {
-  "folke/flash.nvim",
-  event = "VeryLazy",
-opts = {
-  labels = "asdfghjklqwertyuiop",
-  label = {
-    uppercase = false,
-    rainbow = { enabled = true, shade = 5 },
-  },
-  modes = {
-    search = { enabled = false }
-  },
-  keys = {
-    ["<esc>"] = "close",    -- only esc closes
-    ["<bs>"] = "del",       -- backspace deletes a char
-    ["<cr>"] = "jump",      -- enter to jump
-    -- remove s and n from special keys so they type normally
-  },
-},
-},
+    }, 
+{
+  "sphamba/smear-cursor.nvim",
+  lazy = false,
 
+  config = function()
+    print("SMEAR LOADED")
+
+    require("smear_cursor").setup({
+      stiffness = 0.8,
+      trailing_stiffness = 0.6,
+      damping = 0.8,
+    })
+  end,
+},
     { "L3MON4D3/LuaSnip", build = nil, pin = true, opts = {
     -- Automatically remove snippet placeholders when the cursor moves out of them
     region_check_events = "CursorMoved,CursorHold,InsertEnter",
     delete_check_events = "TextChanged,InsertLeave",
   }, },
+{
+  "karb94/neoscroll.nvim",
+  event = "VeryLazy",
+  opts = {
+    mappings = {
+      "<C-u>",
+      "<C-d>",
+      "<C-b>",
+      "<C-f>",
+      "<C-y>",
+      "<C-e>",
+      "zt",
+      "zz",
+      "zb",
+    },
+
+    hide_cursor = true,
+    stop_eof = true,
+    respect_scrolloff = false,
+    cursor_scrolls_alone = true,
+    easing = "quadratic",
+    duration_multiplier = 0.8,
+  },
+},
 }
