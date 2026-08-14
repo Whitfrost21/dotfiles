@@ -7,10 +7,11 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
-# ── Minimal Prompt ──
-PS1='\[\e[38;5;81m\]\u\[\e[0m\] \[\e[38;5;252m\]\w\[\e[0m\] \[\e[38;5;109m\]⟩\[\e[0m\] '
-
+alias vim='nvim'
+# ── my old prompt──
+# PS1='\[\e[38;5;81m\]\u\[\e[0m\] \[\e[38;5;252m\]\w\[\e[0m\] \[\e[38;5;109m\]⟩\[\e[0m\] '
+# PS1='\[\e[30;46m\] \u \[\e[0m\] \[\e[30;42m\] \w \[\e[0m\] \n❯ '
+eval "$(starship init bash)"
 
 export PATH=$HOME/.local/bin:$PATH
 
@@ -34,3 +35,7 @@ if [ -f "$HOME/.cache/wallust/sequences" ]; then
 fi
 
 export EDITOR="nvim"
+export CLASSPATH="$HOME/workspace/java(no way)/trn/cuts/shorts.jar:.:$HOME/workspace/java(no way)/trn/Database:$HOME/workspace/java(no way)/trn/Database/mariadb-java-client-3.5.9.jar"
+
+#gtk theme 
+export GTK_THEME="orchis"

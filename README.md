@@ -1,4 +1,4 @@
-# 🧠 Linux Dotfiles
+#  Linux Dotfiles
 
 This repository contains my personal Linux dotfiles — a fully reproducible development environment built around a minimal and keyboard-driven workflow.
 
@@ -6,19 +6,17 @@ The goal of this setup is simplicity, performance, and consistency across machin
 
 ---
 
-## ⚙️ Core Stack
+##  Core Stack
 
 - **OS**: Endeavour OS (Arch Linux based)
 - **Window Manager:** Hyprland(Wayland)
 - **Terminal:** Ghostty
-- **Editor:** Zed
+- **Editor:** Neovim
 - **Shell:** bash
 - **Status Bar:** Waybar
 - **Notifications:** SwayNC
 
----
 
-## Apps
 
 | App / Tool          | Category                |
 | :------------------ | :---------------------- |
@@ -31,11 +29,11 @@ The goal of this setup is simplicity, performance, and consistency across machin
 | **waybar**          | Status Bar              |
 | **wofi**            | App Launcher            |
 | **wlogout**         | Logout Menu             |
-| **yazi**            | File Manager            |
+| **lf**            | File Manager            |
 
 ---
 
-## ✨ Philosophy
+##  Philosophy
 
 - Keep the system minimal
 - Prefer keyboard-driven workflows
@@ -56,7 +54,7 @@ This setup allows me to rebuild my entire working environment in minutes.
 
 ---
 
-## 📂 Structure
+##  Structure
 
 .config/ contains all application configurations managed via GNU Stow.
 
@@ -64,7 +62,7 @@ Each config is symlinked into `~/.config` to keep the home directory clean while
 
 ---
 
-## 🚀 Setup
+##  Setup
 
 Clone the repository:
 
@@ -78,7 +76,7 @@ Restart your session or reload the relevant applications.
 
 ---
 
-## ⚠️ Notes
+##  Notes
 
 - This setup is tailored to my workflow — feel free to adapt it to yours.
 - Some applications may require additional dependencies (fonts, themes, plugins).
@@ -87,7 +85,7 @@ Restart your session or reload the relevant applications.
 
 ---
 
-## 🛠️ Future Improvements
+##  Future Improvements
 
 - Theming consistency
 - Host-specific configs
